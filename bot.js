@@ -32,7 +32,7 @@ client.on('ready', () => {
   console.log(`channels! [ " ${client.channels.size} " ]`);
   console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
  
-client.user.setGame("soon", "https://www.twitch.tv/alpha");
+client.user.setGame("-new|By ahmed", "https://www.twitch.tv/alpha");
 });
  
  
