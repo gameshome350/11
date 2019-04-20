@@ -32,7 +32,7 @@ client.on('ready', () => {
   console.log(`channels! [ " ${client.channels.size} " ]`);
   console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
  
-client.user.setGame("-new|By ahmed", "https://www.twitch.tv/alpha");
+client.user.setGame("-new|By Ahmed", "https://www.twitch.tv/alpha");
 });
  
  
@@ -104,7 +104,7 @@ client.on('ready', () => {// افنت التشغيل
                       role.edit({color : "RANDOM"});
                   };
       });
-  }, 2000);// وقت الريمبو لا تغيرة لانه الوقت المسموح للتغيير
+  }, 10000);// وقت الريمبو لا تغيرة لانه الوقت المسموح للتغيير
 })
 
 
