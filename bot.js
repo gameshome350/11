@@ -113,7 +113,7 @@ if (message.content === '-help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
       .addField("**:globe_with_meridians: الأوامر العامه**","** **")
-      .addField("***ping :stopwatch:**","**لـ سرعة إتصالك**")
+      .addField("***-new :heart:**","**لفتح تيكت**")
       .addField("***id :chart_with_downwards_trend:**","**عرض سرعه اتصال البوت**")
       .addField("***avatar :camping:**","**لـ صور الشخص المختار**")
       .addField("***roll :1234:**","**لـ القرعه من 1 - 100**")
