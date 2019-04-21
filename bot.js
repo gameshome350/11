@@ -107,6 +107,21 @@ client.on('ready', () => {// افنت التشغيل
   }, 10000);// وقت الريمبو لا تغيرة لانه الوقت المسموح للتغيير
 })
 
+client.on("message", async message => {
+    if(message.content.startsWith(prefix + "help")) {
+        let help = new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setThumbnail(message.author.avatarURL)
+            .setDescription(`**__ticketbot and rainbow | by ahmed__ 
 
+            لفتح تيك : ${prefix}new
+          لقفل التكيت : ${prefix}close
+         		 ملحوظه يجب عمل رتبه Support Team
+				 لعمل ريينبو قم بعمل رول Rainbow وهتشتغل اوتوماتيك
+            **`);
+			
+            message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
+    }
+});
 
 client.login(process.env.BOT_TOKEN);
