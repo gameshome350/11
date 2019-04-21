@@ -116,8 +116,9 @@ client.on("message", async message => {
 
           ${prefix}new :  لفتح تيك 
           ${prefix}close :  لقفل التكيت  
-          ${prefix}invite: لدعوه البوت الي سيرفرك
-         		 Support Team ملحوظه يجب عمل رتبه
+     ${prefix}invite: لدعوه البوت الي سيرفرك
+         ${prefix}bot:لمعلومات الوت
+Support Team ملحوظه يجب عمل رتبه
 				 لعمل ريينبو قم بعمل رولRainbowوهتشتغل اوتوماتيك
             **`);
 			
