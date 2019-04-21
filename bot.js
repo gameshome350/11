@@ -114,10 +114,10 @@ client.on("message", async message => {
             .setThumbnail(message.author.avatarURL)
             .setDescription(`**__ticketbot and rainbow | by ahmed__ 
 
-            لفتح تيك : ${prefix}new
-          لقفل التكيت : ${prefix}close
-         		 ملحوظه يجب عمل رتبه Support Team
-				 لعمل ريينبو قم بعمل رول Rainbow وهتشتغل اوتوماتيك
+          ${prefix}new :  لفتح تيك 
+          ${prefix}close :  لقفل التكيت  
+         		 Support Team ملحوظه يجب عمل رتبه
+				 لعمل ريينبو قم بعمل رولRainbowوهتشتغل اوتوماتيك
             **`);
 			
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
