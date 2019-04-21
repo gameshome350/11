@@ -116,6 +116,7 @@ client.on("message", async message => {
 
           ${prefix}new :  لفتح تيك 
           ${prefix}close :  لقفل التكيت  
+          ${prefix}invite: لدعوه البوت الي سيرفرك
          		 Support Team ملحوظه يجب عمل رتبه
 				 لعمل ريينبو قم بعمل رولRainbowوهتشتغل اوتوماتيك
             **`);
@@ -128,7 +129,7 @@ client.on("message", async message => {
 
 client.on('message', message => {
   if (true) {
-if (message.content === '.invite') {
+if (message.content === '-invite') {
       message.author.send(' https://discordapp.com/api/oauth2/authorize?client_id=558575428499931136&permissions=8&scope=bot  |  تفضل ربط البوت     ').catch(e => console.log(e.stack));
  
     }
@@ -137,7 +138,7 @@ if (message.content === '.invite') {
  
  
 client.on('message', message => {
-     if (message.content === ".invite") {
+     if (message.content === "-invite") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
