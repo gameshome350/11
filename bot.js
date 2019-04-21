@@ -35,7 +35,31 @@ client.on('ready', () => {
 client.user.setGame("-new|By Ahmed", "https://www.twitch.tv/alpha");
 });
  
- 
+ if (message.content === '-help') {
+         let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)    
+      .addField("globe_with_meridians الأوامر العامه"," ")
+      .addField("*-new heart","لفتح تيكت")
+      .addField("*id chart_with_downwards_trend","عرض سرعه اتصال البوت")
+      .addField("*avatar camping","لـ صور الشخص المختار")
+      .addField("*roll 1234","لـ القرعه من 1 - 100")
+      .addField("*server recycle","لـ معلومات السيرفر")
+      .addField("*roles medal ","لـــ معرفة رولات السيرفر")
+      .addField("*say arrows_counterclockwise","لـ يكرر الكلام اللى تقوله")
+      .addField("*time alarm_clock","لـ معرفة الساعة")
+      .addField("*date ","لـ معرفة التاريخ")
+	   .addField("*invites","لـــ معرفة دعواتك في السيرفر")
+	   .addField("*bot","لـــ معرفة معلومات البوت")
+	   .addField("*قوانين","لـــ معرفة قوانين السيرفر")
+	    .addField("*جديد","لـــ معرفة الجديد في البوت :)")
+        .addField("*tag","لـــ زخرفة الكلام")
+        .addField("*رابط ","لـــا عطاك رابط السيرفر")
+	    .addField("*sug ","لاقتراح اي اقتراح تريد ملزوم سبب طويل")
+
+.setColor('RANDOM')
+  message.author.sendEmbed(embed);
+    }
+});
  
  client.on("message", (message) => {
  
