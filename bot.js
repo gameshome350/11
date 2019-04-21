@@ -152,5 +152,21 @@ client.on('message', message => {
 
 
 
+ 
+ 
+ client.on('message', message => {
+     if (message.content === (prefix + "bot")) {
+         if(!message.channel.guild) return;
+     let embed = new Discord.RichEmbed()//DIAMONDCODES
+  .setColor("#8650a7")//DIAMONDCODES
+  .addField("** ✅ Servers: **" , client.guilds.size)//DIAMONDCODES
+  .addField("** ✅ Users: **" , client.users.size)//DIAMONDCODES
+  .addField("** ✅ Channels: **" , client.channels.size)//DIAMONDCODES
+    .addField("** 🚀 Ping **" , Date.now() - message.createdTimestamp)//DIAMONDCODES
+    .setTimestamp()//DIAMONDCODES
+  message.channel.sendEmbed(embed);//DIAMONDCODES
+    }
+});
+
 
 client.login(process.env.BOT_TOKEN);
