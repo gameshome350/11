@@ -94,45 +94,16 @@ client.user.setGame("-help -invite|By Ahmed", "https://www.twitch.tv/alpha");
 });
 
 
-client.on("message", message => { // تعريف المسج
-  if(message.content.startsWith(`${prefix}rainbow`)){ // اذا الرسالة انكتبت برفكس رينبو
-if(!message.member.roles.find("name","❆ VIP") && !message.member.roles.find("name", "everyone")) return message.reply("ليس لديك صلاحية لتشغيل هذا الامر, يجب ان يكون لديك رتبة VIP ``#vip``"); // لو م لقا معاه رتبة في اي بي يرد عليه ويقله ..
-let role = message.guild.roles.find(r => r.name === "Rainbow"); // لو لقاها معاه يدور على رتبة اسمها Rainbow
-if(message.member.roles.array().includes(role)) {
-message.member.removeRole(role); // هنا يحذف الرتبة لو معاه ياها
-message.reply("تم أزاله الرينبو"); // Says Rainbow Has Been Removed.
-} else { 
-message.member.addRole(role); // هنا يضيف له الرتبة لو م لقاها
-message.reply("تم أضافه الرينبو"); // Says Rainbow Has Been Added
-} // تقفيله
-}}) // تقفيله الكود
-
-client.on("ready", () => { // هنا لو بدأ البوت 
-    setInterval(function(){ 
-        client.guilds.get("ايدي سيرفرك").roles.find("name", "Rainbow").edit({ // هنا  يلاقي بلأيدي الي انت حطيته رتبة اسمها رينبو يبدا يعدل على لونها الى
-            color : "RANDOM" // راندوم 
-        }); // تقفيله
-    }, 60000) // كل ٦ ثواني يغير الون
-});  // تقفيله الكود
-
-client.on("message", async message => {
-    if(message.content.startsWith(prefix + "help")) {
-        let help = new Discord.RichEmbed()
-            .setColor("RANDOM")
-            .setThumbnail(message.author.avatarURL)
-            .setDescription(`**__ticketbot and rainbow | by ahmed__ 
-
-          ${prefix}new :  لفتح تيك 
-          ${prefix}close :  لقفل التكيت  
-     ${prefix}invite: لدعوه البوت الي سيرفرك
-         ${prefix}bot:لمعلومات الوت
-Support Team ملحوظه يجب عمل رتبه
-				 لعمل ريينبو قم بعمل رولRainbowوهتشتغل اوتوماتيك
-            **`);
-			
-            message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
-    }
-});
+client.on('ready', () => {// افنت التشغيل 
+  setInterval(function(){
+      client.guilds.forEach(g => { // فور ايرج تدخل للسيرفرات كلها
+                  var role = g.roles.find('name', 'Rainbow');//Rainbow  اسم الرتبة عشان يسوي ريمبو غيرها اذا تبي
+                  if (role) {
+                      role.edit({color : "RANDOM"});
+                  };
+      });
+  }, 60000);// وقت الريمبو لا تغيرة لانه الوقت المسموح للتغيير
+})
 
 
 
