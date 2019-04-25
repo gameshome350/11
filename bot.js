@@ -149,4 +149,25 @@ client.on('message', message => {
 });
 
 
+client.on("message", async message => {
+    if(message.content.startsWith(prefix + "help")) {
+        let help = new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setThumbnail(message.author.avatarURL)
+            .setDescription(`**__ticketbot and rainbow | by ahmed__ 
+
+          ${prefix}new :  لفتح تيك 
+          ${prefix}close :  لقفل التكيت  
+     ${prefix}invite: لدعوه البوت الي سيرفرك
+         ${prefix}bot:لمعلومات الوت
+Support Team ملحوظه يجب عمل رتبه
+				 لعمل ريينبو قم بعمل رولRainbowوهتشتغل اوتوماتيك
+            **`);
+			
+            message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
+    }
+});
+
+
+
 client.login(process.env.BOT_TOKEN);
